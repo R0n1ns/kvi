@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вадим Коробов - Backend разработчик</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FFF0F5;
+            font-family: 'Anonymous Pro', monospace;
+        }
+
+        /* Layout adjustments */
+        header,
+        section {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .profile-image {
+            width: 431px;
+            height: 430px;
+            object-fit: cover;
+        }
+
+        /* Skills */
+        .skills-bar-container {
+            display: flex;
+            width: 70%;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .skills-bar {
+            background-color: #ddd;
+            border-radius: 5px;
+            width: 75%;
+        }
+
+        .skills-bar span {
+            display: block;
+            background-color: #4caf50;
+            height: 20px;
+            border-radius: 5px;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            list-style-type: none;
+            padding-left: 0;
+            align-items: center;
+
+        }
+
+        .contact-info li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            background-color: #ADE0FF;
+            border-radius: 40px;
+            width: 50%;
+            height: 70px;
+            text-align: center;
+        }
+        .contact-info li:hover{
+            background-color: rgba(128, 255, 184, 0.76);
+            transition:0.7s;
+        }
+
+        .contact-info li img {
+            margin-right: 10px;
+        }
+        .contact-info li h5 {
+            margin-right: 10px;
+            margin-top: 7px;
+        }
+        /* Projects */
+        .project-card {
+            background-color: #E3FFFC;
+            border: 2px solid #A4B0FF;
+            border-radius: 40px;
+            padding: 20px;
+            margin-bottom: 20px;
+            height: 100px;
+        }
+
+        /* Form Styling */
+        input,
+        textarea {
+            background-color: #D9D9D9;
+            border: 1px solid #000000;
+            border-radius: 40px;
+            padding: 10px;
+            width: 100%;
+        }
+
+        button.btn-primary {
+            background-color: #0000FF;
+            border-radius: 40px;
+            width: 100%;
+        }
+        .navigate{
+            border-radius: 80px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+        <ul style="position:fixed;" class="nav nav-pills  end-0 flex-column ">
+            <li style="opacity:0.7;" class="nav-item p-1">
+                <a class="nav-link bg-white rounded-pill" aria-current="page" href="#main">Главная</a>
+            </li>
+            <li style="opacity:0.7;" class="nav-item p-1">
+                <a class="nav-link bg-white rounded-pill" href="#about">Коротко обо мне</a>
+            </li>
+            <li style="opacity:0.7;" class="nav-item p-1">
+                <a class="nav-link bg-white rounded-pill" href="#contacts">Контакты</a>
+            </li>
+        </ul>
+    <!-- Header -->
+    <header class="container py-2">
+        <div class="row">
+            <!-- Left Column: Name, Position, Languages -->
+            <div id="main" class="col  flex-column align-items-start">
+                <h1 class="display-5">Вадим Коробов</h1>
+                <h3>Backend разработчик</h3>
+
+                <!-- Language Skills -->
+                <div class="mt-4">
+                    <h3>Знания:</h3>
+
+                    <!-- Python -->
+                    <div class="skills-bar-container row " >
+                        <span class="h4 col">Python</span>
+                        <div class="skills-bar p-0 col" >
+                            <span style="width: 80%;"></span>
+                        </div>
+                    </div>
+
+                    <!-- HTML/CSS -->
+                    <div class="skills-bar-container row">
+                        <span  class="h4 col">HTML/CSS</span>
+                        <div class="skills-bar p-0 col">
+                            <span style="width: 60%;"></span>
+                        </div>
+                    </div>
+
+                    <!-- C++ -->
+                    <div class="skills-bar-container row">
+                        <span class="h4 col">C++</span>
+                        <div class="skills-bar p-0 col">
+                            <span style="width: 50%;"></span>
+                        </div>
+                    </div>
+
+                    <!-- Go -->
+                    <div class="skills-bar-container row">
+                        <span  class="h4 col">Go</span>
+                        <div class="skills-bar p-0 col">
+                            <span style="width: 60%;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Profile Image -->
+            <div class="col d-flex flex-column align-items-center">
+                <img src="photo.png" alt="Profile Image" class="profile-image">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me & Projects -->
+    <section id="about" class="container py-5">
+        <div class="row">
+            <!-- About Me -->
+            <div class="col-md-12 text-left">
+                <h3>Кратко обо мне:</h3>
+                <p class="h5 p-1">Бэкэнд разработчик-энтузиаст пишущий на go/python, веб часть на html/css, а так же редко на c++. Зачастую пишу сайты, ботов, скрипты и многое другое.</p>
+            </div>
+
+            <!-- Projects in 3 equal columns -->
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="project-card ">
+                        <h5>Коммерческая разработка на Kwork</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h5>Библиотека и консоль для Wireguard</h5>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-card">
+                        <h5>Сайт на Go для продажи VPN</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="project-card">
+                        <h5>Студенческий бот для вуза</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="project-card">
+                        <h5>Проект на Python</h5>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="project-card">
+                        <h5>Проект на HTML/CSS</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts & Feedback -->
+    <section id="contacts" class="container py-5">
+        <div class="row">
+            <!-- Contacts -->
+            <div class="col-md-6">
+                <h3>Контакты:</h3>
+                <ul class="contact-info ">
+                    <li onclick="location.href='https://t.me/I_R0n1n_I';" class="p-4">
+                        <img src="telegram-icon.png" alt="Telegram Icon"  width="15%">
+                        <h5>I_R0n1n_I</h5>
+                    </li>
+                    <li onclick="location.href='https://github.com/R0n1ns';" class="p-4">
+                        <img src="github-icon.png" alt="Discord Icon" width="15%">
+                        <h5>R0n1ns</h5>
+                    </li>
+                    <li onclick="location.href='https://vk.com/ronin__i';" class="p-4">
+                        <img src="vk-icon.png" alt="GitHub Icon" width="15%">
+                        <h5>ronin__i</h5>
+                    </li>
+                    <li onclick="location.href='https://kwork.ru/user/mr_kvi';" class="p-4">
+                        <img src="kwork-icon.png" alt="Steam Icon" width="15%">
+                        <h5>mr_kvi</h5>
+                    </li>
+                </ul>
+            </div>
+
+<!-- Feedback Form -->
+<!-- Feedback Form -->
+<div class="col-md-6">
+    <h4>Обратная связь:</h4>
+    <form action="https://formspree.io/f/xgvevzoq" method="POST">
+        <div class="mb-3">
+            <label for="phone" class="form-label">Телефон</label>
+            <input type="text" class="form-control" id="phone" name="phone" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Почта</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="question" class="form-label">Вопрос</label>
+            <textarea class="form-control" id="question" name="question" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+</div>
+
+</div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
